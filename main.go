@@ -24,7 +24,10 @@ func main() {
 		case do == "/":
 			del(num1, num2)
 		}
-		checkrepeatCalculation()
+		isRepeatCalculetion := checkrepeatCalculation()
+		if !isRepeatCalculetion {
+			break
+		}
 	}
 
 }
@@ -51,7 +54,7 @@ func umn(num1 int, num2 int) {
 
 func checkrepeatCalculation() bool {
 	var userChoise string
-	fmt.Print("Вы хотите сделать еще расчет? (Y/n)")
+	fmt.Println("Вы хотите сделать еще расчет? (Y/n)")
 	fmt.Scan(&userChoise)
 
 	if userChoise == "y" || userChoise == "Y" {
