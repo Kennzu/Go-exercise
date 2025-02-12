@@ -14,7 +14,7 @@ func main() {
 func summNumber(str []string) float64 {
 	var summ float64
 	for _, s := range str {
-		num, _ := strconv.ParseFloat(s, 64) // Игнорируем ошибку, она всегда будет игнорироваться
+		num, _ := strconv.ParseFloat(s, 64)
 		summ += num
 	}
 	return summ
